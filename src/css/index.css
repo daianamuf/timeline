@@ -81,7 +81,6 @@ body {
 }
 .slider.mobile .website {
   scroll-snap-align: start;
-  position: static;
 }
 
 .website {
