@@ -45,7 +45,7 @@ const websites = [
     date: "JUL 2024",
     title: "Physiobloom Studio",
     description:
-      "The process of development of this website was something I really enjoyed, as I wanted to focuse more on creating an elegant, soft design that would perfectly describe the business it is presenting. A lot of hours were put into researching inspiration for this kind of website where details mattered more than it's complexity.",
+      "The process of development of this website was something I really enjoyed, as I wanted to focus more on creating an elegant, soft design that would perfectly describe the business it is presenting. A lot of hours were put into researching inspiration for this kind of website where details mattered more than it's complexity.",
     image: "/assets/images/5.png",
   },
   {
@@ -54,7 +54,7 @@ const websites = [
     date: "AUG 2024",
     title: "Evosiding",
     description:
-      "Already on my 6th project, I found myself put into another challenge: creating a website that would ease the process of presenting the business to the owner! This is why this site focuses more on what is happening in the background, so I implemented an optimised content management system, so the owner can efficiently display their merchandise.",
+      "Already on my 6th project, I found myself put into another challenge: creating a website that would ease the process for the owner in order for them to present the business! This is why this site focuses more on what is happening in the background, so I implemented an optimised content management system, so the owner can efficiently display their merchandise.",
     image: "/assets/images/6.png",
   },
   {
@@ -63,7 +63,7 @@ const websites = [
     date: "SOON",
     title: "More in the future!",
     description:
-      "For now, I hope that the next opportunities will come with different challenges, different ideas, as I am excited to grow and do more and more projects that extend my web developement career!",
+      "For now, I hope that the next opportunities will come with different challenges, different ideas, as I am excited to grow and do more and more projects that extend my web development career!",
   },
 ];
 
