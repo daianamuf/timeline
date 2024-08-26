@@ -67,7 +67,7 @@ body {
 }
 @media (max-width: 900px) {
   .slider {
-    height: 70rem;
+    height: 75rem;
   }
 }
 .slider.mobile {
@@ -81,6 +81,7 @@ body {
 }
 .slider.mobile .website {
   scroll-snap-align: start;
+  position: static;
 }
 
 .website {

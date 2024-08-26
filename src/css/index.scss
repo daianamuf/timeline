@@ -64,7 +64,7 @@ body {
   }
 
   @media (max-width: 900px) {
-    height: 70rem;
+    height: 75rem;
   }
 
   &.mobile {
@@ -79,6 +79,7 @@ body {
 
     & .website {
       scroll-snap-align: start;
+      position: static;
     }
   }
 }
