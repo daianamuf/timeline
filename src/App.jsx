@@ -132,7 +132,11 @@ function App() {
           <div
             key={website.id}
             className={`website website-${index + 1}`}
-            style={{ transform: `translateX(${100 * (index - currSlide)}%)` }}
+            style={{
+              transform: `translateX(${100 * (index - currSlide)}%)`,
+              opacity: index === currSlide ? 1 : 0.25,
+              transition: "opacity 0.3s ease",
+            }}
           >
             {website.image && <img src={website.image} alt={website.title} />}
             <div className="website__info">
