@@ -98,9 +98,8 @@ function App() {
       if (sliderElement) {
         const scrollLeft = sliderElement.scrollLeft;
         const slideWidth = sliderElement.offsetWidth;
-        newSlideIndex = Math.round(scrollLeft / slideWidth);
+        newSlideIndex = Math.floor(scrollLeft / slideWidth);
       }
-      return 0;
     };
 
     const handleScroll = () => {
