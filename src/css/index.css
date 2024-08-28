@@ -142,7 +142,7 @@ body {
 }
 .website__info a:link, .website__info a:visited {
   text-decoration: none;
-  color: #62345b;
+  color: #815d7c;
   font-weight: 600;
   font-size: 1.4rem;
   transition: all 0.5s;
@@ -239,17 +239,10 @@ body {
   margin: 0;
 }
 .dots__dot--active {
-  color: #62345b;
+  color: #815d7c;
 }
 .dots__dot--active::before {
-  background-color: #62345b;
-  opacity: 1;
-}
-.dots__dot--activeMobile {
-  color: #62345b;
-}
-.dots__dot--activeMobile::before {
-  background-color: #62345b;
+  background-color: #815d7c;
   opacity: 1;
 }
 
