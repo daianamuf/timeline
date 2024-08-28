@@ -98,7 +98,7 @@ function App() {
       if (sliderElement) {
         const scrollLeft = sliderElement.scrollLeft;
         const slideWidth = sliderElement.offsetWidth;
-        newSlideIndex = Math.floor(scrollLeft / slideWidth);
+        newSlideIndex = Math.round(scrollLeft / slideWidth);
       }
     };
 
@@ -158,7 +158,7 @@ function App() {
                 ? "dots__dot--active"
                 : ""
             }`}
-            onClick={() => goToSlide(index)}
+            onClick={!touchMedia.matches ? () => goToSlide(index) : null}
           >
             {website.date}
           </span>
