@@ -131,15 +131,16 @@ function App() {
         {slides.map((website, index) => (
           <div
             key={website.id}
-            className={`website website-${index + 1}`}
+            className={`website website-${index + 1} ${
+              index === currSlide && !touchMedia.matches ? "active" : ""
+            } ${index === currIndex && touchMedia.matches ? "active" : ""}`}
             style={{
               transform: `translateX(${100 * (index - currSlide)}%)`,
-              opacity: index === currSlide ? 1 : 0.25,
-              transition: "opacity 0.3s ease",
             }}
           >
             {website.image && <img src={website.image} alt={website.title} />}
             <div className="website__info">
+              <div className="website__bg">{website.date}</div>
               <h2>{website.title}</h2>
               <a href={website.link} target="_blank" rel="noopener noreferrer">
                 {website.link}
