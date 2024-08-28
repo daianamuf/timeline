@@ -30,7 +30,7 @@ body {
 
 .wrapper {
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,6 +38,11 @@ body {
   gap: 6rem;
   margin-top: 1rem;
   padding-bottom: 5rem;
+}
+@media (max-width: 900px) {
+  .wrapper {
+    gap: 2rem;
+  }
 }
 
 .heading {
@@ -67,7 +72,7 @@ body {
 }
 @media (max-width: 900px) {
   .slider {
-    height: 75rem;
+    height: 50rem;
   }
 }
 .slider.mobile {
@@ -94,6 +99,7 @@ body {
 @media (max-width: 900px) {
   .website {
     margin-left: 1rem;
+    gap: 2rem;
   }
 }
 @media (max-width: 900px) {

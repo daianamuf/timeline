@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import { useEffect, useRef } from "react";
 import { useState } from "react";
 
@@ -67,15 +66,28 @@ const websites = [
   },
 ];
 
+const touchMedia = window.matchMedia("(max-width: 900px)");
+
 function App() {
   const [slides] = useState(websites);
   const [currSlide, setCurrSlide] = useState(0);
   const [currIndex, setCurrIndex] = useState(0);
   const sliderRef = useRef(null);
-  const touchMedia = window.matchMedia("(max-width: 900px)");
 
   const goToSlide = (index) => {
     setCurrSlide(index);
+
+    if (touchMedia.matches) {
+      const sliderElement = sliderRef.current;
+      if (sliderElement) {
+        const slideWidth = sliderElement.offsetWidth;
+        const scrollPosition = index * slideWidth;
+        sliderElement.scrollTo({
+          left: scrollPosition,
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   useEffect(() => {
@@ -108,7 +120,7 @@ function App() {
         }
       };
     }
-  }, [touchMedia]);
+  }, []);
 
   return (
     <main className="wrapper">
@@ -135,22 +147,23 @@ function App() {
         ))}
       </section>
       <div className="dots">
-        {slides.map((website, index) => {
-          const dotClassname = classNames("dots__dot", {
-            "dots__dot--active": !touchMedia.matches && index === currSlide,
-            "dots__dot--activeMobile":
-              touchMedia.matches && index === currIndex,
-          });
-          return (
-            <span
-              key={index}
-              className={dotClassname}
-              onClick={() => goToSlide(index)}
-            >
-              {website.date}
-            </span>
-          );
-        })}
+        {slides.map((website, index) => (
+          <span
+            key={index}
+            className={`dots__dot ${
+              index === currSlide && !touchMedia.matches
+                ? "dots__dot--active"
+                : ""
+            } ${
+              index === currIndex && touchMedia.matches
+                ? "dots__dot--active"
+                : ""
+            }`}
+            onClick={() => goToSlide(index)}
+          >
+            {website.date}
+          </span>
+        ))}
       </div>
     </main>
   );

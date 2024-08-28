@@ -31,7 +31,7 @@ body {
 
 .wrapper {
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +39,10 @@ body {
   gap: 6rem;
   margin-top: 1rem;
   padding-bottom: 5rem;
+
+  @media (max-width: 900px) {
+    gap: 2rem;
+  }
 }
 
 .heading {
@@ -64,7 +68,7 @@ body {
   }
 
   @media (max-width: 900px) {
-    height: 75rem;
+    height: 50rem;
   }
 
   &.mobile {
@@ -93,6 +97,7 @@ body {
 
   @media (max-width: 900px) {
     margin-left: 1rem;
+    gap: 2rem;
   }
 
   @media (max-width: 900px) {
@@ -130,7 +135,7 @@ body {
       &:link,
       &:visited {
         text-decoration: none;
-        color: #62345b;
+        color: #815d7c;
         font-weight: 600;
         font-size: 1.4rem;
         transition: all 0.5s;
@@ -232,19 +237,10 @@ body {
     }
 
     &--active {
-      color: #62345b;
+      color: #815d7c;
 
       &::before {
-        background-color: #62345b;
-        opacity: 1;
-      }
-    }
-
-    &--activeMobile {
-      color: #62345b;
-
-      &::before {
-        background-color: #62345b;
+        background-color: #815d7c;
         opacity: 1;
       }
     }
