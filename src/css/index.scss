@@ -66,14 +66,15 @@ body {
   }
 
   @media (max-width: 770px) {
-    height: 65rem;
+    height: 70rem;
   }
   @media (max-width: 650px) {
     height: 50rem;
   }
 
   &.mobile {
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -101,13 +102,13 @@ body {
 
   @media (max-width: 770px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 3fr 1.1fr;
     gap: 3rem;
   }
-
   @media (max-width: 650px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1.4fr;
+    grid-template-rows: 1fr 1.1fr;
+    gap: 3rem;
   }
 
   &.active {
@@ -239,6 +240,7 @@ body {
       width: 50%;
 
       @media (max-width: 770px) {
+        width: 80%;
         grid-column: 1/2;
         grid-row: 1/3;
       }
