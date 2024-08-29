@@ -140,7 +140,55 @@ function App() {
           >
             {website.image && <img src={website.image} alt={website.title} />}
             <div className="website__info">
-              <div className="website__info--bg">{website.date}</div>
+              <div className="website__info--bg">
+                {website.date.includes(" ") ? (
+                  <>
+                    <div className="date-month">
+                      {website.date
+                        .split(" ")[0]
+                        .split("")
+                        .map((char, index) => (
+                          <span
+                            key={index}
+                            style={{ transitionDelay: `${index * 0.3}s` }}
+                          >
+                            {char}
+                          </span>
+                        ))}
+                    </div>
+                    <div className="date-year">
+                      {website.date
+                        .split(" ")[1]
+                        .split("")
+                        .map((char, index) => (
+                          <span
+                            key={index}
+                            style={{
+                              transitionDelay: `${
+                                (index + website.date.split(" ")[0].length) *
+                                0.3
+                              }s`,
+                            }}
+                          >
+                            {char}
+                          </span>
+                        ))}
+                    </div>
+                  </>
+                ) : (
+                  <div className="date-full">
+                    {website.date.split("").map((char, index) => (
+                      <span
+                        key={index}
+                        style={{ transitionDelay: `${index * 0.3}s` }}
+                      >
+                        {char}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <h2>{website.title}</h2>
               <a href={website.link} target="_blank" rel="noopener noreferrer">
                 {website.link}
