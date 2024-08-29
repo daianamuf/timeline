@@ -140,7 +140,7 @@ function App() {
           >
             {website.image && <img src={website.image} alt={website.title} />}
             <div className="website__info">
-              <div className="website__bg">{website.date}</div>
+              <div className="website__info--bg">{website.date}</div>
               <h2>{website.title}</h2>
               <a href={website.link} target="_blank" rel="noopener noreferrer">
                 {website.link}
